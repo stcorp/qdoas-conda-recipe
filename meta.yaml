@@ -1,0 +1,55 @@
+{% set version = "v3.4.4" %}
+{% set sha256 = "e82e5ac064855dff04efb1239790b62bb4d73cce36cbafd9de4e3670525d6e74" %}
+{% set tag = version %}
+
+package:
+  name: qdoas
+  version: {{ version }} 
+
+source:
+  url: https://github.com/UVVIS-BIRA-IASB/qdoas/archive/{{ tag }}.zip
+  sha256: {{ sha256 }}
+
+app:
+  entry: qdoas
+  icon: logo.png
+  summary: Application that performs DOAS retrievals of trace gases from spectral measurements
+
+build:
+  script_env:
+    - SDKROOT  # [osx]
+
+requirements:
+  build:
+    - cmake
+    - pkg-config
+    - coda
+    - gsl
+    - hdfeos2
+    - hdfeos5
+    - libnetcdf
+    - qt
+    - qwt
+    - gxx_linux-64  # [linux]
+    - libselinux-cos6-x86_64  # [linux]
+    - libxdamage-cos6-x86_64  # [linux]
+    - libxext-cos6-x86_64  # [linux]
+    - libxfixes-cos6-x86_64  # [linux]
+    - libxxf86vm-cos6-x86_64  # [linux]
+    - mesa-dri-drivers-cos6-x86_64  # [linux]
+    - mesa-libegl-devel-cos6-x86_64  # [linux]
+    - mesa-libgl-devel-cos6-x86_64  # [linux]
+
+  run:
+    - coda
+    - gsl
+    - hdfeos2
+    - hdfeos5
+    - libnetcdf
+    - qt
+    - qwt
+
+about:
+  home: https://github.com/UVVIS-BIRA-IASB/qdoas
+  license: GPL
+  license_file: LICENSE
