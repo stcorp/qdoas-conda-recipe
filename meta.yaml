@@ -1,5 +1,5 @@
-{% set version = "3.4.4" %}
-{% set sha256 = "b96c5471420b7c264fe5469aac981e7c125c0181eafd3ff17cde8407fe7e5ea0" %}
+{% set version = "3.4.5" %}
+{% set sha256 = "ae1870100882a29fce6d056cbf1f705e6ae8fe4640bfeadd3fd5cc4567680bd5" %}
 {% set tag = version %}
 
 package:
@@ -16,6 +16,7 @@ app:
   summary: Application that performs DOAS retrievals of trace gases from spectral measurements
 
 build:
+  number: 0
   script_env:
     - SDKROOT  # [osx]
 
