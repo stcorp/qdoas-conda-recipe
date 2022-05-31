@@ -1,5 +1,5 @@
-{% set version = "3.4.5" %}
-{% set sha256 = "ae1870100882a29fce6d056cbf1f705e6ae8fe4640bfeadd3fd5cc4567680bd5" %}
+{% set version = "3.4.6" %}
+{% set sha256 = "ebe1f1785ad69c6da8370d000b70563b3c70ab542d89ff579fceb8bddcd6907d" %}
 {% set tag = version %}
 
 package:
@@ -32,14 +32,11 @@ requirements:
     - qt
     - qwt
     - gxx_linux-64  # [linux]
-    - libselinux-cos6-x86_64  # [linux]
-    - libxdamage-cos6-x86_64  # [linux]
-    - libxext-cos6-x86_64  # [linux]
-    - libxfixes-cos6-x86_64  # [linux]
-    - libxxf86vm-cos6-x86_64  # [linux]
-    - mesa-dri-drivers-cos6-x86_64  # [linux]
-    - mesa-libegl-devel-cos6-x86_64  # [linux]
-    - mesa-libgl-devel-cos6-x86_64  # [linux]
+    - sysroot_linux-64  2.17  # [linux]
+    - mesa-dri-drivers-cos7-x86_64  # [linux]
+    - mesa-libgl-devel-cos7-x86_64  # [linux]
+    - libx11-cos7-x86_64  # [linux]
+    - libxext-cos7-x86_64  # [linux]
 
   run:
     - coda
