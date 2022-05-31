@@ -16,7 +16,7 @@ app:
   summary: Application that performs DOAS retrievals of trace gases from spectral measurements
 
 build:
-  number: 1
+  number: 0
   script_env:
     - SDKROOT  # [osx]
 
